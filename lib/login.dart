@@ -6,16 +6,58 @@ class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-          child: Text(
-        'Welcome to login Page',
-        style: TextStyle(
-          fontSize: 40,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-        textScaleFactor: 0.5,
-      )),
-    );
+        color: Colors.white,
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/login.png",
+              fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Login",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+            ),
+            Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Enter Email",
+                    labelText: "Username",
+                  ),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "Enter Password",
+                    labelText: "Securitykey",
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                ElevatedButton(
+                  child: Text("Sign-in"),
+                  style: TextButton.styleFrom(),
+                  onPressed: () {
+                    print("Hi Prakhar");
+                  },
+                ),
+              ],
+            )
+          ],
+        ));
   }
 }
