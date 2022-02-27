@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/utils/routes.dart';
+import 'package:flutter_login/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_login/widgets/drawer.dart';
 import 'home.dart';
@@ -14,11 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        primaryTextTheme: GoogleFonts.latoTextTheme(),
-      ),
+      themeMode: ThemeMode.light,
+      theme: AppTheme.lighttheme(context),
+      darkTheme: AppTheme.darkTheme(context),
       initialRoute: PrakharRoutes.homeRoute,
       routes: {
         PrakharRoutes.homeRoute: (context) => home(),

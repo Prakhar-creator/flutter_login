@@ -11,7 +11,7 @@ class MyDrawer extends StatelessWidget {
         "https://media-exp1.licdn.com/dms/image/C5603AQEzeubEmQO-Sg/profile-displayphoto-shrink_200_200/0/1617099582030?e=1649289600&v=beta&t=2iwr32qLXzeTc-8bpviMALSMuWqQpnTZbOFE284M-lw";
     return Drawer(
       child: Container(
-        color: Colors.blueAccent,
+        color: Color.fromARGB(255, 44, 43, 43),
         child: ListView(
           children: [
             DrawerHeader(
@@ -20,6 +20,7 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 accountName: Text("Prakhar"),
                 accountEmail: Text("prakharmishra288@gmail.com"),
+                decoration: BoxDecoration(color: Colors.black),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(ImageUrl),
                 ),
