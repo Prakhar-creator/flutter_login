@@ -11,22 +11,22 @@ class MyDrawer extends StatelessWidget {
         "https://media-exp1.licdn.com/dms/image/C5603AQEzeubEmQO-Sg/profile-displayphoto-shrink_200_200/0/1617099582030?e=1649289600&v=beta&t=2iwr32qLXzeTc-8bpviMALSMuWqQpnTZbOFE284M-lw";
     return Drawer(
       child: Container(
-        color: Color.fromARGB(255, 44, 43, 43),
+        color: const Color.fromARGB(255, 44, 43, 43),
         child: ListView(
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-                accountName: Text("Prakhar"),
-                accountEmail: Text("prakharmishra288@gmail.com"),
-                decoration: BoxDecoration(color: Colors.black),
+                accountName: const Text("Prakhar"),
+                accountEmail: const Text("prakharmishra288@gmail.com"),
+                decoration: const BoxDecoration(color: Colors.black),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(ImageUrl),
                 ),
               ),
             ),
-            ListTile(
+            const ListTile(
                 leading: Icon(
                   CupertinoIcons.home,
                   color: Colors.white,
@@ -36,22 +36,52 @@ class MyDrawer extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                     ))),
-            ListTile(
+            const ListTile(
                 leading: Icon(
-                  CupertinoIcons.mail,
+                  CupertinoIcons.cart,
                   color: Colors.white,
                 ),
-                title: Text("Email",
+                title: Text("Checkout",
                     textScaleFactor: 1.2,
                     style: TextStyle(
                       color: Colors.white,
                     ))),
-            ListTile(
+            const ListTile(
                 leading: Icon(
-                  CupertinoIcons.profile_circled,
+                  CupertinoIcons.cube_box,
                   color: Colors.white,
                 ),
-                title: Text("Profile",
+                title: Text("orders",
+                    textScaleFactor: 1.2,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ))),
+            const ListTile(
+                leading: Icon(
+                  CupertinoIcons.book,
+                  color: Colors.white,
+                ),
+                title: Text("Terms And Condition",
+                    textScaleFactor: 1.2,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ))),
+            const ListTile(
+                leading: Icon(
+                  CupertinoIcons.shield,
+                  color: Colors.white,
+                ),
+                title: Text("Privacy Policy",
+                    textScaleFactor: 1.2,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ))),
+            const ListTile(
+                leading: Icon(
+                  CupertinoIcons.info,
+                  color: Colors.white,
+                ),
+                title: Text("About Developer",
                     textScaleFactor: 1.2,
                     style: TextStyle(
                       color: Colors.white,

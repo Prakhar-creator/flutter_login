@@ -33,14 +33,14 @@ class _loginState extends State<login> {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/login.png",
+                "assets/images/loginimage.png",
                 fit: BoxFit.cover,
               ),
               SizedBox(
                 height: 20.0,
               ),
               Text(
-                "Login  $name",
+                "Login",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class _loginState extends State<login> {
                     height: 20.0,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(changeButton ? 8 : 16),
                     child: InkWell(
                       onTap: () => movetohome(context),
@@ -112,6 +112,18 @@ class _loginState extends State<login> {
                       ),
                     ),
                   ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, PrakharRoutes.signupRoute);
+                    },
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      padding: EdgeInsets.all(50),
+                    ),
+                    child: Text(
+                      "New User Register Here!",
+                    ),
+                  ),
                 ],
               )
             ],
@@ -119,11 +131,3 @@ class _loginState extends State<login> {
         )));
   }
 }
- //ElevatedButton(
-                  //  child: Text("Sign-in"),
-                  //  style: TextButton.styleFrom(minimumSize: Size(150, 40)),
-                  //  onPressed: () {
-                  //    Navigator.pushNamed(context, PrakharRoutes.homeRoute);
-                  //  },
-
-                  // ),
